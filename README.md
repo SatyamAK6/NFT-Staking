@@ -1,4 +1,4 @@
-# NFT-Marketplace with Royalties
+# NFT-Staking
 
 ### Requirements
 
