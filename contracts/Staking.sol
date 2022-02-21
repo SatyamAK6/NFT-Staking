@@ -71,10 +71,10 @@ contract Staking {
 
     function unstake() public {
         require(isStaker[msg.sender], "You are not contributed in stake");
-        // require(
-        //     Stakes[msg.sender].releaseTime <= block.timestamp,
-        //     "Your time is not finish yet!!!"
-        // );
+        require(
+             Stakes[msg.sender].releaseTime <= block.timestamp,
+             "Your time is not finish yet!!!"
+        );
         BitcoinERC1155(nftContract).safeTransferFrom(
             owner,
             msg.sender,
